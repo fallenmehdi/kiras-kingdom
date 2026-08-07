@@ -1,1 +1,3 @@
-console.log("Kira's Kingdom");
+function showMessage() {
+  alert("Welcome to Kira's Kingdom!");
+}
