@@ -1,3 +1,8 @@
-function showMessage() {
-  alert("Welcome to Kira's Kingdom!");
+function kiraMessage() {
+
+  alert(
+    "KIRA IS WATCHING.\n\n" +
+    "There is no escape from justice."
+  );
+
 }
