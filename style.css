@@ -900,3 +900,183 @@ footer p {
         height: auto;
     }
 }
+/* ================= KIRA'S VICTIMS ================= */
+
+.victims-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(229, 9, 20, 0.08),
+            transparent 50%
+        );
+}
+
+.victim-intro {
+    max-width: 800px;
+    margin-bottom: 70px;
+}
+
+.victim-intro h3 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.victim-intro > p:last-child {
+    color: #888;
+    line-height: 1.8;
+}
+
+
+/* VICTIM GRID */
+
+.victim-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* VICTIM CARD */
+
+.victim-card {
+    display: flex;
+
+    gap: 25px;
+
+    padding: 32px;
+
+    background: #0a0a0a;
+
+    border: 1px solid #1c1c1c;
+
+    border-left: 2px solid #e50914;
+
+    transition: 0.35s;
+}
+
+.victim-card:hover {
+    background: #101010;
+
+    transform: translateY(-5px);
+
+    border-color: rgba(229, 9, 20, 0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* NUMBER */
+
+.victim-number {
+    min-width: 35px;
+
+    color: #e50914;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 20px;
+}
+
+
+/* CONTENT */
+
+.victim-content h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.victim-content p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* STATUS */
+
+.death-status {
+    color: #e50914;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+/* COUNTER */
+
+.victim-counter {
+    max-width: 800px;
+
+    margin: 80px auto 0;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    background: #080808;
+
+    border: 1px solid #222;
+}
+
+.victim-counter span {
+    display: block;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.victim-counter strong {
+    display: block;
+
+    color: #e50914;
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(45px, 8vw, 80px);
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.victim-counter small {
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .victim-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .victim-card {
+        padding: 25px;
+    }
+
+}
