@@ -1516,3 +1516,23 @@ footer p {
     object-fit: cover;
     border-radius: 50%;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-family: 'Cinzel', serif;
+    color: #e50914;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 6px;
+}
