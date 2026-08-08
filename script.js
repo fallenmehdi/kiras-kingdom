@@ -234,3 +234,56 @@ if (logo) {
     }, 3000);
 
 }
+// ================= KIRA JUDGMENT =================
+
+const judgmentAction = document.getElementById("judgmentAction");
+const victimName = document.getElementById("victimName");
+const judgmentResult = document.getElementById("judgmentResult");
+
+if (judgmentAction) {
+
+    judgmentAction.addEventListener("click", () => {
+
+        const name = victimName.value.trim();
+
+        if (name === "") {
+
+            judgmentResult.textContent =
+                "WRITE A NAME.";
+
+            judgmentResult.classList.remove("active");
+
+            void judgmentResult.offsetWidth;
+
+            judgmentResult.classList.add("active");
+
+            return;
+        }
+
+        judgmentResult.textContent =
+            `${name.toUpperCase()} — JUDGED`;
+
+        judgmentResult.classList.remove("active");
+
+        void judgmentResult.offsetWidth;
+
+        judgmentResult.classList.add("active");
+
+    });
+
+}
+
+
+if (victimName) {
+
+    victimName.addEventListener("keydown", (event) => {
+
+        if (event.key === "Enter") {
+
+            judgmentAction.click();
+
+        }
+
+    });
+
+}
