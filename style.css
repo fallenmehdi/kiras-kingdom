@@ -1316,3 +1316,101 @@ footer p {
     }
 
     .rules
+/* =================================================
+   KIRA / DEATH NOTE STYLE
+================================================= */
+
+.kira-photo {
+    width: 100%;
+    max-width: 500px;
+    height: 380px;
+    margin: 90px auto 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.kira-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* HERO TITLE */
+
+.hero h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(42px, 8vw, 90px);
+    line-height: 1;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e50914;
+    font-size: 0.65em;
+    letter-spacing: 3px;
+}
+
+/* SMALL KIRA LOGO */
+
+.logo {
+    font-size: 22px;
+    letter-spacing: 6px;
+}
+
+/* DEATH NOTE FEEL */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(120,0,0,0.16),
+            transparent 45%
+        ),
+        #030303;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+/* RED LINE */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: rgba(229,9,20,0.5);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .kira-photo {
+        width: 90%;
+        height: 300px;
+        margin-top: 90px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 span {
+        font-size: 0.62em;
+    }
+
+    .hero-content {
+        padding: 100px 20px 60px;
+    }
+}
