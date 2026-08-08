@@ -975,13 +975,13 @@ footer p {
 /* الهاتف */
 @media (max-width: 800px) {
     .kira-photo {
-        height: 300px !important;
+        height: 100px !important;
     }
 
     .kira-photo img {
         width: 100% !important;
-        height: 300px !important;
-        max-height: 300px !important;
+        height: 100px !important;
+        max-height: 100px !important;
         object-fit: contain !important;
     }
 }
