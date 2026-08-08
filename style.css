@@ -1293,6 +1293,33 @@ footer p {
     }
 
 }
-body {
-    background: red !important;
+/* ===== FORCE KIRA KINGDOM SIZE ===== */
+
+.hero h1,
+.hero h1 span {
+    font-size: 35px !important;
+    line-height: 1 !important;
+    letter-spacing: 3px !important;
+    margin: 0 !important;
+}
+
+.hero h1 {
+    max-width: 100% !important;
+}
+
+.hero-content {
+    max-width: 600px !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+    .hero h1,
+    .hero h1 span {
+        font-size: 35px !important;
+        line-height: 1 !important;
+        letter-spacing: 2px !important;
+    }
+
 }
