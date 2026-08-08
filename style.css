@@ -438,25 +438,31 @@ body {
 /* CHARACTER IMAGES */
 
 .kira-photo {
+.kira-photo {
     width: 100%;
-
     background: #080808;
-
     overflow: hidden;
 }
 
 .kira-photo img {
-    display: block;
-
     width: 100%;
-
     height: auto;
+    display: block;
+}
 
-    max-height: 600px;
+@media (min-width: 801px) {
+    .kira-photo img {
+        max-height: 600px;
+        object-fit: contain;
+    }
+}
 
-    object-fit: contain;
-
-    transition: 0.5s;
+@media (max-width: 800px) {
+    .kira-photo img {
+        width: 100%;
+        height: auto;
+    }
+}
 }
 
 .character-card:hover .kira-photo img {
