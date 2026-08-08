@@ -1536,3 +1536,410 @@ footer p {
     font-weight: 700;
     letter-spacing: 6px;
 }
+/* =====================================================
+   KIRA'S KINGDOM — DARK GOTHIC / DEATH NOTE STYLE
+   ===================================================== */
+
+:root {
+    --black: #050505;
+    --black-soft: #0b0b0b;
+    --white: #eeeeee;
+    --gray: #999;
+    --red: #b00000;
+    --red-bright: #d00000;
+    --border: rgba(255,255,255,0.45);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(circle at center, #171717 0%, #050505 55%, #000 100%);
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+}
+
+/* =====================================================
+   GOTHIC DECORATIVE BORDER
+   ===================================================== */
+
+.section,
+.judgment-section,
+.kingdom-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before,
+.judgment-section::before,
+.kingdom-section::before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(255,255,255,0.35);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section::after,
+.judgment-section::after,
+.kingdom-section::after {
+    content: "✦";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 18px;
+    opacity: .7;
+    z-index: 1;
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar {
+    background: rgba(0,0,0,.96);
+    border-bottom: 1px solid rgba(180,0,0,.6);
+}
+
+.logo {
+    font-family: "Cinzel", serif;
+    color: #c00000;
+    letter-spacing: 12px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(120,0,0,.22),
+            transparent 55%
+        ),
+        #050505;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.eyebrow {
+    font-family: "Cinzel", serif;
+    letter-spacing: 10px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    letter-spacing: 5px;
+    line-height: .95;
+}
+
+.hero h1 span {
+    color: #c00000;
+    display: block;
+    font-weight: 800;
+    text-shadow: 0 0 25px rgba(180,0,0,.25);
+}
+
+.slogan {
+    font-family: "Cinzel", serif;
+    color: #b00000;
+    letter-spacing: 8px;
+}
+
+/* =====================================================
+   TITLES
+   ===================================================== */
+
+.section-title {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title span {
+    font-family: "Cinzel", serif;
+    color: #a00000;
+    letter-spacing: 6px;
+}
+
+.section-title h2 {
+    font-family: "Cinzel", serif;
+    letter-spacing: 4px;
+}
+
+/* =====================================================
+   CARDS — OLD BOOK STYLE
+   ===================================================== */
+
+.character-card,
+.victim-card,
+.rule-card,
+.about-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(0,0,0,.85)
+        );
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,.8),
+        inset 0 0 30px rgba(255,255,255,.025);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative corners */
+
+.character-card::before,
+.character-card::after,
+.victim-card::before,
+.victim-card::after,
+.rule-card::before,
+.rule-card::after {
+    content: "❧";
+    position: absolute;
+    color: rgba(255,255,255,.55);
+    font-size: 22px;
+    z-index: 5;
+}
+
+.character-card::before,
+.victim-card::before,
+.rule-card::before {
+    top: 8px;
+    left: 10px;
+}
+
+.character-card::after,
+.victim-card::after,
+.rule-card::after {
+    bottom: 8px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+/* =====================================================
+   CHARACTER IMAGES
+   ===================================================== */
+
+.kira-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.kira-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(0,0,0,.9)
+        );
+
+    pointer-events: none;
+}
+
+.kira-photo img {
+    width: 100%;
+    display: block;
+    filter: grayscale(20%) contrast(1.12);
+    transition: transform .6s ease;
+}
+
+.character-card:hover .kira-photo img {
+    transform: scale(1.04);
+}
+
+/* =====================================================
+   CHARACTER TEXT
+   ===================================================== */
+
+.character-number,
+.red-label,
+.rule-number,
+.death-status {
+    font-family: "Cinzel", serif;
+    letter-spacing: 4px;
+}
+
+.character-number {
+    color: #b00000;
+}
+
+.character-info h3,
+.victim-content h3,
+.rule-card h3,
+.about-card h3 {
+    font-family: "Cinzel", serif;
+    color: #eee;
+    letter-spacing: 2px;
+}
+
+/* =====================================================
+   RULES
+   ===================================================== */
+
+.rules-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.035),
+            transparent 60%
+        ),
+        #050505;
+}
+
+.rule-card {
+    min-height: 220px;
+}
+
+.rule-number {
+    color: #a00000;
+}
+
+/* =====================================================
+   VICTIMS
+   ===================================================== */
+
+.victim-number {
+    font-family: "Cinzel", serif;
+    color: #b00000;
+}
+
+.death-status {
+    color: #c00000;
+    font-size: 11px;
+}
+
+/* =====================================================
+   TOTAL VICTIMS
+   ===================================================== */
+
+.victim-counter {
+    position: relative;
+    border: 1px solid rgba(255,255,255,.35);
+    background: #050505;
+    text-align: center;
+
+    box-shadow:
+        inset 0 0 40px rgba(150,0,0,.08);
+}
+
+.victim-counter span,
+.victim-counter small {
+    display: block;
+    font-family: "Cinzel", serif;
+    letter-spacing: 4px;
+}
+
+.victim-counter strong {
+    display: block;
+    font-family: "Cinzel", serif;
+    color: #c00000;
+    font-size: clamp(45px, 8vw, 90px);
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(180,0,0,.35);
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.main-btn {
+    background: #b00000;
+    border: 1px solid #e00000;
+    color: white;
+
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
+
+    box-shadow:
+        0 0 20px rgba(150,0,0,.15);
+
+    transition: all .3s ease;
+}
+
+.main-btn:hover {
+    background: #d00000;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 30px rgba(180,0,0,.35);
+}
+
+/* =====================================================
+   JUDGMENT
+   ===================================================== */
+
+.judgment-section {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(130,0,0,.18),
+            transparent 60%
+        ),
+        #030303;
+}
+
+.judgment-section h2,
+.kingdom-section h2 {
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
+}
+
+.judgment-section h2 span,
+.kingdom-section h2 span {
+    color: #c00000;
+    display: block;
+}
+
+/* =====================================================
+   INPUT
+   ===================================================== */
+
+.judgment-form input {
+    background: #050505;
+    color: white;
+    border: 1px solid rgba(255,255,255,.35);
+    font-family: "Cinzel", serif;
+    outline: none;
+}
+
+.judgment-form input:focus {
+    border-color: #b00000;
+    box-shadow: 0 0 15px rgba(180,0,0,.2);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background: #020202;
+    border-top: 1px solid rgba(255,255,255,.25);
+}
+
+.footer-logo {
+    font-family: "Cinzel", serif;
+    color: #b00000;
+    letter-spacing: 12px;
+}
