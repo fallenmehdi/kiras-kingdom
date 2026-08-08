@@ -1503,3 +1503,16 @@ footer p {
     }
 
 }
+.logo {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+}
