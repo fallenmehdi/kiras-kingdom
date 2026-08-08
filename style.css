@@ -373,11 +373,7 @@ body::selection {
         0 15px 50px rgba(0,0,0,0.6);
 }
 
-.character-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    }
+
 
 
 
@@ -395,14 +391,7 @@ body::selection {
    with url("images/light.jpg")
 */
 
-.light-image {
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,0.1),
-            rgba(0,0,0,0.8)
-        ),
-        url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80");
-}
+.
 
 .l-image {
     background-image:
@@ -878,5 +867,36 @@ footer p {
 
     .alternate-count strong {
         font-size: 45px;
+    }
+}
+/* KIRA PHOTO */
+
+.kira-photo {
+    width: 100%;
+    background: #080808;
+    overflow: hidden;
+}
+
+.kira-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Desktop */
+
+@media (min-width: 801px) {
+    .kira-photo img {
+        max-height: 600px;
+        object-fit: contain;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .kira-photo img {
+        width: 100%;
+        height: auto;
     }
 }
