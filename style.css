@@ -1247,3 +1247,49 @@ footer p {
     }
 
    }
+/* =========================================
+   FINAL MOBILE FIX
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    /* صورة Death Note */
+    .kira-photo {
+        width: 100% !important;
+        height: 260px !important;
+        max-height: 260px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .kira-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
+
+    /* KIRA'S KINGDOM */
+    .hero h1 {
+        font-size: 42px !important;
+        line-height: 1.05 !important;
+        letter-spacing: 2px !important;
+        margin: 0 !important;
+    }
+
+    .hero h1 span {
+        font-size: 42px !important;
+    }
+
+
+    /* المسافة حول العنوان */
+    .hero-content {
+        padding: 80px 20px 50px !important;
+    }
+
+}
