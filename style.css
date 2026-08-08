@@ -376,12 +376,9 @@ body::selection {
 .character-image {
     .character-img {
     width: 100%;
-    height: 400px;
+    height: auto;
     display: block;
-    object-fit: contain;
-    object-position: center;
-    background: #050505;
-}
+    }
 
 @media (max-width: 800px) {
     .character-img {
