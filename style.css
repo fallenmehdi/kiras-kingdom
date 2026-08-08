@@ -1229,3 +1229,143 @@ footer p {
     }
 
 }
+/* ================= KIRA JUDGMENT ================= */
+
+.judgment-section {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 120px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(229, 9, 20, 0.08),
+            transparent 55%
+        );
+
+    text-align: center;
+}
+
+.judgment-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.judgment-content h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(38px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    margin: 20px 0;
+}
+
+.judgment-content h2 span {
+    display: block;
+
+    color: #e50914;
+}
+
+.judgment-description {
+    color: #777;
+
+    margin-bottom: 40px;
+}
+
+.judgment-form {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.judgment-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 18px 20px;
+
+    background: #080808;
+
+    border: 1px solid #333;
+
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.judgment-form input:focus {
+    border-color: #e50914;
+
+    box-shadow:
+        0 0 20px rgba(229, 9, 20, 0.15);
+}
+
+.judgment-form input::placeholder {
+    color: #555;
+}
+
+.judgment-result {
+    min-height: 80px;
+
+    margin-top: 40px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 28px;
+
+    color: #e50914;
+
+    letter-spacing: 3px;
+}
+
+.judgment-result.active {
+    animation: judgmentAppear 0.8s ease;
+}
+
+@keyframes judgmentAppear {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .judgment-form {
+        flex-direction: column;
+    }
+
+    .judgment-form input,
+    .judgment-form button {
+        width: 100%;
+    }
+
+}
