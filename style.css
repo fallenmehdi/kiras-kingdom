@@ -873,3 +873,35 @@ footer p {
         font-size: 42px;
     }
    }
+/* ===== FIX KIRA'S KINGDOM TITLE ===== */
+
+.hero h1 {
+    font-family: "Cinzel", serif !important;
+    font-size: 42px !important;
+    line-height: 1 !important;
+    letter-spacing: 5px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.hero h1 span {
+    display: block !important;
+    font-size: 38px !important;
+    color: #e50914 !important;
+    margin-top: 5px !important;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .hero h1 {
+        font-size: 38px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .hero h1 span {
+        font-size: 34px !important;
+    }
+}.logo {
+    font-size: 20px !important;
+    letter-spacing: 6px !important;
+}
