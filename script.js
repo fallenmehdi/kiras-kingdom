@@ -78,7 +78,7 @@ function animateCounter() {
 
     countStarted = true;
 
-    const target = 943;
+    const target = 135412;
 
     let current = 0;
 
