@@ -1,7 +1,7 @@
-/* ==================================================
-   KIRA'S KINGDOM
-   DARK / CINEMATIC / DEATH NOTE STYLE
-================================================== */
+/* =====================================================
+   KIRA'S KINGDOM — DEATH NOTE STYLE
+   COMPLETE STYLE.CSS
+===================================================== */
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background: #050505;
+    background: #030303;
     color: #eee;
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
@@ -25,53 +25,45 @@ body {
     color: #fff;
 }
 
-
-/* ==================================================
+/* =====================================================
    NAVBAR
-================================================== */
+===================================================== */
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 78px;
-
+    height: 72px;
+    padding: 0 6%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 7%;
-
-    background: rgba(3, 3, 3, 0.88);
-    backdrop-filter: blur(14px);
-
-    border-bottom: 1px solid rgba(229, 9, 20, 0.15);
-
-    z-index: 1000;
+    background: rgba(3, 3, 3, .88);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(229, 9, 20, .18);
+    z-index: 9999;
 }
 
 .logo {
     font-family: "Cinzel", serif;
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 800;
-    letter-spacing: 8px;
+    letter-spacing: 7px;
     color: #e50914;
 }
 
 .navbar nav {
     display: flex;
-    gap: 30px;
+    gap: 28px;
 }
 
 .navbar nav a {
     color: #888;
     text-decoration: none;
-
     font-size: 12px;
     letter-spacing: 1.5px;
-
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .navbar nav a:hover {
@@ -80,1256 +72,283 @@ body {
 
 .menu-btn {
     display: none;
-
+    border: 0;
     background: none;
-    border: none;
-
     color: white;
     font-size: 26px;
-
     cursor: pointer;
 }
 
-
-/* ==================================================
+/* =====================================================
    HERO
-================================================== */
+===================================================== */
 
 .hero {
     min-height: 100vh;
-
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     overflow: hidden;
 
     background:
         radial-gradient(
-            circle at center,
-            rgba(229, 9, 20, 0.18),
-            transparent 35%
+            circle at 50% 45%,
+            rgba(130, 0, 0, .22),
+            transparent 32%
         ),
-        #050505;
+        radial-gradient(
+            circle at center,
+            #111 0%,
+            #030303 65%
+        );
 }
 
 .hero::before {
     content: "";
-
     position: absolute;
     inset: 0;
 
     background:
-        radial-gradient(
-            ellipse at center,
-            transparent 20%,
-            #050505 80%
+        linear-gradient(
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.9)
         );
 
     pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: rgba(229,9,20,.4);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.25),
-            rgba(0,0,0,0.85)
-        );
+    background: radial-gradient(
+        ellipse at center,
+        transparent 20%,
+        rgba(0,0,0,.8) 80%
+    );
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-
     width: 100%;
-    max-width: 950px;
-
-    padding: 120px 25px 70px;
+    max-width: 1000px;
+    padding: 100px 25px 60px;
 }
 
 .eyebrow {
     color: #777;
-
-    font-size: 11px;
-
-    letter-spacing: 8px;
-
+    font-size: 10px;
+    letter-spacing: 7px;
     margin-bottom: 28px;
 }
 
 .hero h1 {
     font-family: "Cinzel", serif;
-
-    font-size: clamp(55px, 10vw, 125px);
-
-    line-height: 0.95;
-
+    font-size: clamp(55px, 9vw, 120px);
     font-weight: 500;
-
+    line-height: .9;
     letter-spacing: 5px;
 }
 
 .hero h1 span {
     display: block;
-
     color: #e50914;
-
     font-weight: 800;
-
-    text-shadow:
-        0 0 35px rgba(229, 9, 20, 0.15);
+    letter-spacing: 3px;
 }
 
 .slogan {
-    margin-top: 38px;
-
+    margin-top: 35px;
     color: #e50914;
-
     font-family: "Cinzel", serif;
-
-    font-size: 13px;
-
+    font-size: 12px;
     letter-spacing: 9px;
 }
 
 .hero-text {
-    color: #888;
-
-    font-size: 16px;
-
+    max-width: 550px;
+    margin: 28px auto 35px;
+    color: #777;
+    font-size: 15px;
     line-height: 1.8;
-
-    max-width: 600px;
-
-    margin: 30px auto 35px;
 }
 
-
-/* ==================================================
+/* =====================================================
    BUTTON
-================================================== */
+===================================================== */
 
 .main-btn {
     display: inline-block;
-
-    padding: 16px 38px;
-
+    padding: 15px 35px;
     background: #e50914;
-
     color: white;
-
     border: 1px solid #e50914;
-
     text-decoration: none;
-
-    font-size: 12px;
-
+    font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 2px;
-
     cursor: pointer;
-
-    transition: 0.35s;
+    transition: .35s;
 }
 
 .main-btn:hover {
     background: transparent;
-
     color: #e50914;
-
-    box-shadow:
-        0 0 30px rgba(229, 9, 20, 0.3);
+    box-shadow: 0 0 30px rgba(229,9,20,.25);
 }
 
-
-/* ==================================================
-   GENERAL SECTIONS
-================================================== */
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 .section {
     position: relative;
-
-    padding: 120px 8%;
+    padding: 120px 7%;
 }
 
 .section-title {
     display: flex;
-
     align-items: center;
-
     gap: 18px;
-
     margin-bottom: 65px;
 }
 
 .section-title span {
     color: #e50914;
-
     font-family: "Cinzel", serif;
-
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .section-title h2 {
     font-family: "Cinzel", serif;
-
     font-size: clamp(28px, 4vw, 50px);
-
     letter-spacing: 3px;
 }
 
-
-/* ==================================================
+/* =====================================================
    ABOUT
-================================================== */
+===================================================== */
 
 .about-grid {
-    max-width: 1200px;
-
+    max-width: 1150px;
     margin: auto;
-
     display: grid;
-
-    grid-template-columns: 1.3fr 0.7fr;
-
-    gap: 75px;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 70px;
 }
 
 .red-label {
     color: #e50914;
-
     font-size: 10px;
-
     letter-spacing: 5px;
-
     margin-bottom: 20px;
 }
 
 .about-text h3 {
     font-family: "Cinzel", serif;
-
-    font-size: clamp(35px, 5vw, 60px);
-
+    font-size: clamp(32px, 5vw, 60px);
     line-height: 1.1;
-
     margin-bottom: 30px;
 }
 
 .about-text p {
-    color: #888;
-
     max-width: 700px;
-
+    color: #777;
     line-height: 1.9;
-
     margin-bottom: 18px;
 }
 
 .about-card {
     align-self: center;
-
     padding: 45px 30px;
-
     text-align: center;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(229,9,20,0.07),
-            rgba(255,255,255,0.01)
-        );
-
-    border: 1px solid rgba(229,9,20,0.35);
-
-    transition: 0.35s;
+    background: #080808;
+    border: 1px solid #222;
+    transition: .4s;
 }
 
 .about-card:hover {
-    border-color: rgba(229,9,20,0.7);
-
+    border-color: rgba(229,9,20,.5);
     transform: translateY(-5px);
 }
 
 .card-symbol {
-    font-size: 65px;
-
     color: #e50914;
-
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
 .about-card h3 {
     font-family: "Cinzel", serif;
-
     letter-spacing: 3px;
-
     margin-bottom: 15px;
 }
 
 .about-card p {
-    color: #777;
-
+    color: #666;
     line-height: 1.8;
 }
 
 .rule {
     margin-top: 25px;
-
     padding-top: 18px;
-
     border-top: 1px solid #222;
-
     color: #e50914;
-
-    font-size: 10px;
-
+    font-size: 9px;
     letter-spacing: 4px;
 }
 
-
-/* ==================================================
+/* =====================================================
    CHARACTERS
-================================================== */
+===================================================== */
 
 .characters-section {
-    background: #080808;
+    background: #070707;
 }
 
 .character-grid {
-    max-width: 1200px;
-
+    max-width: 1150px;
     margin: auto;
-
     display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
+    grid-template-columns: repeat(2,1fr);
     gap: 25px;
 }
 
 .character-card {
     overflow: hidden;
-
-    background: #0b0b0b;
-
+    background: #090909;
     border: 1px solid #1d1d1d;
-
-    transition: 0.4s;
+    transition: .4s;
 }
 
 .character-card:hover {
     transform: translateY(-7px);
-
-    border-color: rgba(229,9,20,0.55);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.6);
+    border-color: rgba(229,9,20,.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
 }
 
-
-/* CHARACTER IMAGES */
+/* YOUR EXISTING IMAGES */
 
 .kira-photo {
-.kira-photo {
     width: 100%;
-    background: #080808;
+    height: 360px;
     overflow: hidden;
-}
-
-.kira-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (min-width: 801px) {
-    .kira-photo img {
-        max-height: 600px;
-        object-fit: contain;
-    }
-}
-
-@media (max-width: 800px) {
-    .kira-photo img {
-        width: 100%;
-        height: auto;
-    }
-}
-}
-
-.character-card:hover .kira-photo img {
-    transform: scale(1.025);
-}
-
-
-/* CHARACTER INFO */
-
-.character-info {
-    padding: 30px;
-}
-
-.character-number {
-    color: #e50914;
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-}
-
-.character-info h3 {
-    font-family: "Cinzel", serif;
-
-    font-size: 27px;
-
-    margin: 13px 0;
-}
-
-.character-info p {
-    color: #777;
-
-    font-size: 14px;
-
-    line-height: 1.8;
-
-    margin-bottom: 22px;
-}
-
-.stats {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 9px;
-}
-
-.stats span {
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #555;
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-}
-
-.stats b {
-    color: #ccc;
-}
-
-
-/* ==================================================
-   VICTIMS
-================================================== */
-
-.victims-section {
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(229,9,20,0.07),
-            transparent 55%
-        );
-}
-
-.victim-intro {
-    max-width: 800px;
-
-    margin-bottom: 60px;
-}
-
-.victim-intro h3 {
-    font-family: "Cinzel", serif;
-
-    font-size: clamp(35px, 5vw, 60px);
-
-    line-height: 1.1;
-
-    margin-bottom: 20px;
-}
-
-.victim-intro > p:last-child {
-    color: #777;
-
-    line-height: 1.8;
-}
-
-
-/* VICTIM COUNTER */
-
-.victim-counter {
-    max-width: 800px;
-
-    margin: 0 auto 65px;
-
-    padding: 45px 25px;
-
-    text-align: center;
-
-    background: #080808;
-
-    border: 1px solid #222;
-}
-
-.victim-counter span {
-    display: block;
-
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 12px;
-}
-
-.victim-counter strong {
-    display: block;
-
-    color: #e50914;
-
-    font-family: "Cinzel", serif;
-
-    font-size: clamp(45px, 8vw, 80px);
-
-    letter-spacing: 4px;
-
-    margin-bottom: 10px;
-
-    text-shadow:
-        0 0 25px rgba(229,9,20,0.15);
-}
-
-.victim-counter small {
-    color: #555;
-}
-
-
-/* VICTIM GRID */
-
-.victim-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-}
-
-.victim-card {
-    display: flex;
-
-    gap: 22px;
-
-    padding: 28px;
-
-    background: #0a0a0a;
-
-    border: 1px solid #1b1b1b;
-
-    border-left: 2px solid #e50914;
-
-    transition: 0.35s;
-}
-
-.victim-card:hover {
-    background: #101010;
-
-    transform: translateY(-5px);
-
-    border-color: rgba(229,9,20,0.45);
-}
-
-.victim-number {
-    min-width: 32px;
-
-    color: #e50914;
-
-    font-family: "Cinzel", serif;
-
-    font-size: 18px;
-}
-
-.victim-content h3 {
-    font-family: "Cinzel", serif;
-
-    font-size: 22px;
-
-    margin-bottom: 10px;
-}
-
-.victim-content p {
-    color: #777;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-
-    margin-bottom: 15px;
-}
-
-.death-status {
-    color: #e50914;
-
-    font-size: 8px;
-
-    letter-spacing: 3px;
-}
-
-
-/* ==================================================
-   RULES
-================================================== */
-
-.rules-section {
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(229,9,20,0.05),
-            transparent 60%
-        );
-}
-
-.rules-intro {
-    max-width: 800px;
-
-    margin-bottom: 55px;
-}
-
-.rules-intro h3 {
-    font-family: "Cinzel", serif;
-
-    font-size: clamp(38px, 6vw, 65px);
-
-    line-height: 1.05;
-
-    margin: 15px 0 22px;
-}
-
-.rules-intro > p:last-child {
-    color: #777;
-
-    max-width: 650px;
-
-    line-height: 1.8;
-}
-
-.rules-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 18px;
-}
-
-.rule-card {
-    position: relative;
-
-    min-height: 220px;
-
-    padding: 30px;
-
-    background: #080808;
-
-    border: 1px solid #1d1d1d;
-
-    transition: 0.4s;
-
-    overflow: hidden;
-}
-
-.rule-card::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 2px;
-    height: 0;
-
-    background: #e50914;
-
-    transition: 0.4s;
-}
-
-.rule-card:hover {
-    transform: translateY(-7px);
-
-    border-color: #333;
-}
-
-.rule-card:hover::before {
-    height: 100%;
-}
-
-.rule-number {
-    display: block;
-
-    color: #e50914;
-
-    font-size: 8px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 22px;
-}
-
-.rule-card h3 {
-    font-family: "Cinzel", serif;
-
-    font-size: 23px;
-
-    margin-bottom: 13px;
-}
-
-.rule-card p {
-    color: #777;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-}
-
-
-/* ==================================================
-   JUDGMENT
-================================================== */
-
-.judgment-section {
-    min-height: 70vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 110px 20px;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(229,9,20,0.09),
-            transparent 55%
-        );
-}
-
-.judgment-content {
-    width: 100%;
-
-    max-width: 850px;
-}
-
-.judgment-content h2 {
-    font-family: "Cinzel", serif;
-
-    font-size: clamp(38px, 6vw, 72px);
-
-    line-height: 1.05;
-
-    margin: 20px 0;
-}
-
-.judgment-content h2 span {
-    display: block;
-
-    color: #e50914;
-}
-
-.judgment-description {
-    color: #777;
-
-    margin-bottom: 35px;
-}
-
-.judgment-form {
-    display: flex;
-
-    gap: 10px;
-
-    max-width: 650px;
-
-    margin: auto;
-}
-
-.judgment-form input {
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 17px 20px;
-
-    background: #080808;
-
-    border: 1px solid #333;
-
-    color: white;
-
-    outline: none;
-
-    font-family: "Inter", sans-serif;
-
-    transition: 0.3s;
-}
-
-.judgment-form input:focus {
-    border-color: #e50914;
-
-    box-shadow:
-        0 0 20px rgba(229,9,20,0.15);
-}
-
-.judgment-form input::placeholder {
-    color: #555;
-}
-
-.judgment-result {
-    min-height: 70px;
-
-    margin-top: 35px;
-
-    color: #e50914;
-
-    font-family: "Cinzel", serif;
-
-    font-size: 25px;
-
-    letter-spacing: 3px;
-}
-
-.judgment-result.active {
-    animation: judgmentAppear 0.8s ease;
-}
-
-@keyframes judgmentAppear {
-    from {
-        opacity: 0;
-
-        transform: scale(0.8);
-
-        filter: blur(8px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: scale(1);
-
-        filter: blur(0);
-    }
-}
-
-
-/* ==================================================
-   KINGDOM
-================================================== */
-
-.kingdom-section {
-    min-height: 80vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 100px 25px;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(229,9,20,0.15),
-            transparent 48%
-        );
-}
-
-.kingdom-content {
-    max-width: 900px;
-}
-
-.kingdom-content h2 {
-    font-family: "Cinzel", serif;
-
-    font-size: clamp(45px, 8vw, 95px);
-
-    line-height: 1.05;
-
-    margin-bottom: 28px;
-}
-
-.kingdom-content h2 span {
-    display: block;
-
-    color: #e50914;
-}
-
-.kingdom-content > p {
-    color: #777;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    margin-bottom: 35px;
-}
-
-.judgment-message {
-    min-height: 25px;
-
-    margin-top: 22px;
-
-    color: #e50914;
-
-    font-family: "Cinzel", serif;
-}
-
-
-/* ==================================================
-   INTRO ANIMATION
-================================================== */
-
-.kira-intro {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 9999;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
     background: #030303;
-
-    text-align: center;
-
-    pointer-events: none;
-
-    animation: introFadeOut 1s ease 3.5s forwards;
-}
-
-.intro-content {
-    animation: introAppear 1.5s ease forwards;
-}
-
-.intro-label {
-    color: #777;
-
-    font-size: 10px;
-
-    letter-spacing: 8px;
-
-    margin-bottom: 22px;
-}
-
-.intro-content h1 {
-    font-family: "Cinzel", serif;
-
-    font-size: clamp(55px, 10vw, 115px);
-
-    line-height: 0.95;
-
-    letter-spacing: 5px;
-}
-
-.intro-content h1 span {
-    display: block;
-
-    color: #e50914;
-
-    text-shadow:
-        0 0 25px rgba(229,9,20,0.3);
-}
-
-.intro-subtitle {
-    color: #555;
-
-    font-size: 9px;
-
-    letter-spacing: 6px;
-
-    margin-top: 30px;
-}
-
-.intro-line {
-    width: 0;
-
-    height: 1px;
-
-    margin: 22px auto 0;
-
-    background: #e50914;
-
-    animation: introLine 2s ease 0.5s forwards;
-}
-
-@keyframes introAppear {
-    from {
-        opacity: 0;
-
-        transform: scale(0.85);
-
-        filter: blur(15px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: scale(1);
-
-        filter: blur(0);
-    }
-}
-
-@keyframes introLine {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 180px;
-    }
-}
-
-@keyframes introFadeOut {
-    to {
-        opacity: 0;
-
-        visibility: hidden;
-    }
-}
-
-
-/* ==================================================
-   SCROLL ANIMATION
-================================================== */
-
-.hidden {
-    opacity: 0;
-
-    transform: translateY(35px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.visible {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* ==================================================
-   FOOTER
-================================================== */
-
-footer {
-    padding: 65px 20px;
-
-    text-align: center;
-
-    background: #030303;
-
-    border-top: 1px solid #171717;
-}
-
-.footer-logo {
-    color: #e50914;
-
-    font-family: "Cinzel", serif;
-
-    font-size: 28px;
-
-    letter-spacing: 9px;
-
-    margin-bottom: 18px;
-}
-
-footer p {
-    color: #555;
-
-    font-size: 11px;
-
-    margin: 8px;
-}
-
-
-/* ==================================================
-   TABLET
-================================================== */
-
-@media (max-width: 900px) {
-
-    .navbar nav {
-        gap: 18px;
-    }
-
-    .navbar nav a {
-        font-size: 10px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .rules-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        height: 70px;
-
-        padding: 0 22px;
-    }
-
-    .logo {
-        font-size: 21px;
-
-        letter-spacing: 6px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .navbar nav {
-        position: absolute;
-
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-
-        display: none;
-
-        flex-direction: column;
-
-        gap: 0;
-
-        background: #080808;
-
-        border-bottom: 1px solid #222;
-    }
-
-    .navbar nav.open {
-        display: flex;
-    }
-
-    .navbar nav a {
-        padding: 17px 22px;
-
-        font-size: 11px;
-
-        border-bottom: 1px solid #171717;
-    }
-
-    .hero-content {
-        padding-top: 130px;
-    }
-
-    .hero h1 {
-        font-size: 56px;
-
-        letter-spacing: 3px;
-    }
-
-    .eyebrow {
-        letter-spacing: 5px;
-
-        font-size: 9px;
-    }
-
-    .slogan {
-        font-size: 10px;
-
-        letter-spacing: 5px;
-    }
-
-    .hero-text {
-        font-size: 14px;
-    }
-
-    .section {
-        padding: 90px 22px;
-    }
-
-    .section-title {
-        margin-bottom: 45px;
-    }
-
-    .character-grid,
-    .victim-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .character-info {
-        padding: 25px;
-    }
-
-    .kira-photo img {
-        width: 100%;
-
-        height: auto;
-
-        max-height: none;
-
-        object-fit: contain;
-    }
-
-    .victim-card {
-        padding: 24px;
-    }
-
-    .rules
-/* =================================================
-   KIRA / DEATH NOTE STYLE
-================================================= */
-
-.kira-photo {
-    width: 100%;
-    max-width: 500px;
-    height: 380px;
-    margin: 90px auto 0;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: #000;
+    justify-content: center;
 }
 
 .kira-photo img {
@@ -1339,78 +358,518 @@ footer p {
     display: block;
 }
 
-/* HERO TITLE */
-
-.hero h1 {
-    font-family: "Cinzel", serif;
-    font-size: clamp(42px, 8vw, 90px);
-    line-height: 1;
-    letter-spacing: 5px;
-    text-align: center;
+.character-info {
+    padding: 30px;
 }
 
-.hero h1 span {
-    display: block;
+.character-number {
     color: #e50914;
-    font-size: 0.65em;
-    letter-spacing: 3px;
+    font-size: 9px;
+    letter-spacing: 4px;
 }
 
-/* SMALL KIRA LOGO */
-
-.logo {
-    font-size: 22px;
-    letter-spacing: 6px;
+.character-info h3 {
+    font-family: "Cinzel", serif;
+    font-size: 28px;
+    margin: 12px 0;
 }
 
-/* DEATH NOTE FEEL */
+.character-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
 
-.hero {
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.stats span {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.stats b {
+    color: #ccc;
+}
+
+/* =====================================================
+   VICTIMS
+===================================================== */
+
+.victims-section {
     background:
         radial-gradient(
             circle at center,
-            rgba(120,0,0,0.16),
+            rgba(150,0,0,.08),
+            transparent 55%
+        );
+}
+
+.victim-intro {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.victim-intro h3 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(34px,5vw,60px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.victim-intro > p:last-child {
+    color: #777;
+    line-height: 1.8;
+}
+
+.victim-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+}
+
+.victim-card {
+    display: flex;
+    gap: 22px;
+    padding: 28px;
+    background: #080808;
+    border: 1px solid #1c1c1c;
+    border-left: 2px solid #e50914;
+    transition: .35s;
+}
+
+.victim-card:hover {
+    background: #101010;
+    transform: translateY(-4px);
+}
+
+.victim-number {
+    min-width: 30px;
+    color: #e50914;
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+}
+
+.victim-content h3 {
+    font-family: "Cinzel", serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.victim-content p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.death-status {
+    color: #e50914;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+/* =====================================================
+   COUNTER
+===================================================== */
+
+.victim-counter {
+    max-width: 750px;
+    margin: 70px auto 0;
+    padding: 40px 20px;
+    text-align: center;
+    background: #070707;
+    border: 1px solid #222;
+}
+
+.victim-counter span {
+    display: block;
+    color: #666;
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+.victim-counter strong {
+    display: block;
+    color: #e50914;
+    font-family: "Cinzel", serif;
+    font-size: clamp(45px,7vw,80px);
+    letter-spacing: 4px;
+}
+
+.victim-counter small {
+    color: #555;
+}
+
+/* =====================================================
+   RULES
+===================================================== */
+
+.rules-section {
+    background: #060606;
+}
+
+.rules-intro {
+    max-width: 750px;
+    margin-bottom: 55px;
+}
+
+.rules-intro h3 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(35px,5vw,65px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.rules-intro > p:last-child {
+    color: #777;
+    line-height: 1.8;
+}
+
+.rules-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.rule-card {
+    position: relative;
+    min-height: 220px;
+    padding: 30px;
+    background: #080808;
+    border: 1px solid #1b1b1b;
+    transition: .4s;
+}
+
+.rule-card:hover {
+    transform: translateY(-6px);
+    border-color: #333;
+}
+
+.rule-number {
+    display: block;
+    color: #e50914;
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.rule-card h3 {
+    font-family: "Cinzel", serif;
+    font-size: 23px;
+    margin-bottom: 13px;
+}
+
+.rule-card p {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   JUDGMENT
+===================================================== */
+
+.judgment-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 20px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(229,9,20,.1),
+            transparent 55%
+        );
+}
+
+.judgment-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.judgment-content h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(38px,6vw,70px);
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.judgment-content h2 span {
+    display: block;
+    color: #e50914;
+}
+
+.judgment-description {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.judgment-form {
+    display: flex;
+    gap: 10px;
+    max-width: 620px;
+    margin: auto;
+}
+
+.judgment-form input {
+    flex: 1;
+    padding: 16px 18px;
+    background: #080808;
+    border: 1px solid #292929;
+    color: white;
+    outline: none;
+}
+
+.judgment-form input:focus {
+    border-color: #e50914;
+}
+
+.judgment-result {
+    min-height: 70px;
+    margin-top: 35px;
+    color: #e50914;
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+}
+
+.judgment-result.active {
+    animation: judgmentAppear .7s ease;
+}
+
+@keyframes judgmentAppear {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* =====================================================
+   KINGDOM
+===================================================== */
+
+.kingdom-section {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(229,9,20,.15),
             transparent 45%
-        ),
-        #030303;
+        );
 }
 
-.hero-content {
-    max-width: 900px;
+.kingdom-content {
+    max-width: 850px;
 }
 
-/* RED LINE */
-
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 8%;
-    right: 8%;
-    height: 1px;
-    background: rgba(229,9,20,0.5);
+.kingdom-content h2 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(42px,7vw,90px);
+    line-height: 1;
+    margin-bottom: 25px;
 }
 
-/* MOBILE */
+.kingdom-content h2 span {
+    color: #e50914;
+}
+
+.kingdom-content > p {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.judgment-message {
+    color: #e50914 !important;
+    margin-top: 22px !important;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: #020202;
+    border-top: 1px solid #161616;
+}
+
+.footer-logo {
+    color: #e50914;
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    letter-spacing: 8px;
+    margin-bottom: 18px;
+}
+
+footer p {
+    color: #444;
+    font-size: 11px;
+    margin: 8px;
+}
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 800px) {
 
-    .kira-photo {
-        width: 90%;
-        height: 300px;
-        margin-top: 90px;
+    .navbar {
+        height: 65px;
+        padding: 0 20px;
     }
 
-    .hero h1 {
-        font-size: 48px;
-        letter-spacing: 3px;
+    .logo {
+        font-size: 18px;
+        letter-spacing: 5px;
     }
 
-    .hero h1 span {
-        font-size: 0.62em;
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: #070707;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+
+    .navbar nav a {
+        padding: 16px 22px;
+        border-bottom: 1px solid #171717;
     }
 
     .hero-content {
-        padding: 100px 20px 60px;
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .slogan {
+        letter-spacing: 5px;
+        font-size: 9px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .victim-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 45px;
+    }
+
+    .kira-photo {
+        height: 300px;
+    }
+
+    .character-info {
+        padding: 25px;
+    }
+
+    .judgment-form {
+        flex-direction: column;
+    }
+
+    .judgment-form input,
+    .judgment-form button {
+        width: 100%;
     }
 }
+
+/* SMALL PHONES */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+    .kira-photo {
+        height: 260px;
+    }
+
+    .victim-card {
+        padding: 22px;
+    }
+
+    .victim-counter strong {
+        font-size: 42px;
+    }
+   }
