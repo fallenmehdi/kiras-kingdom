@@ -374,18 +374,12 @@ body::selection {
 }
 
 .character-image {
-    .character-img {
     width: 100%;
     height: auto;
     display: block;
     }
 
-@media (max-width: 800px) {
-    .character-img {
-        height: auto;
-        max-height: 500px;
-    }
-}
+
 
 
 .character-card:hover .character-image {
