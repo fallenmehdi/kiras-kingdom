@@ -951,3 +951,37 @@ footer p {
         object-fit: contain !important;
     }
 }
+/* ===== FIX KIRA PHOTO ===== */
+
+.kira-photo {
+    width: 100% !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #050505 !important;
+}
+
+.kira-photo img {
+    width: 100% !important;
+    height: 300px !important;
+    max-width: 100% !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* الهاتف */
+@media (max-width: 800px) {
+    .kira-photo {
+        height: 300px !important;
+    }
+
+    .kira-photo img {
+        width: 100% !important;
+        height: 300px !important;
+        max-height: 300px !important;
+        object-fit: contain !important;
+    }
+}
