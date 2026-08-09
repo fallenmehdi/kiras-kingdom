@@ -1421,3 +1421,107 @@ main {
     object-fit: contain;
     display: block;
 }
+/* ================= KIRA INTRO ================= */
+
+.kira-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #030303;
+    text-align: center;
+
+    animation: introFadeOut 1s ease 3.5s forwards;
+    pointer-events: none;
+}
+
+.intro-content {
+    animation: introAppear 1.5s ease forwards;
+}
+
+.intro-label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+}
+
+.intro-content h1 {
+    margin: 0;
+
+    font-family: "Cinzel", serif;
+    font-size: clamp(55px, 10vw, 120px);
+    line-height: .95;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+.intro-content h1 span {
+    display: block;
+    color: #e50914;
+
+    text-shadow:
+        0 0 25px rgba(229, 9, 20, .4);
+}
+
+.intro-line {
+    width: 0;
+    height: 1px;
+
+    margin: 28px auto 0;
+
+    background: #e50914;
+
+    animation: introLine 2s ease .5s forwards;
+}
+
+
+/* ظهور النص */
+
+@keyframes introAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(.85);
+        filter: blur(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+
+/* الخط الأحمر */
+
+@keyframes introLine {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 180px;
+    }
+}
+
+
+/* اختفاء شاشة البداية */
+
+@keyframes introFadeOut {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
