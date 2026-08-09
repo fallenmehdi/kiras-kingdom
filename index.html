@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,26 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ================= KIRA INTRO ================= -->
+<!-- ================= INTRO ================= -->
 
 <div id="kiraIntro" class="kira-intro">
 
     <div class="intro-content">
 
-        <p class="intro-label">
-            DEATH NOTE
-        </p>
+        <p class="intro-label">DEATH NOTE</p>
 
         <h1>
             I AM
             <span>JUSTICE.</span>
         </h1>
-
-        <p class="intro-subtitle">
-            
-        </p>
 
         <div class="intro-line"></div>
 
@@ -42,21 +37,20 @@
 </div>
 
 
-
 <!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
-<header class="navbar">
 
-    <<div class="logo">
-    <img src="./kira-logo.jpg" alt="KIRA">
-    </div>
+    <a href="#home" class="logo">
+        <img src="./kira-logo.jpg" alt="KIRA">
+    </a>
 
     <button id="menu" class="menu-btn">
         ☰
     </button>
 
-    <nav>
+    <nav id="nav">
+
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#characters">Characters</a>
@@ -64,6 +58,7 @@
         <a href="#rules">Rules</a>
         <a href="#judgment">Judgment</a>
         <a href="#kingdom">Kingdom</a>
+
     </nav>
 
 </header>
@@ -73,11 +68,11 @@
 
 <section id="home" class="hero">
 
-    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
 
-    <div class="hero-content hidden">
-
-        <p class="eyebrow">WELCOME TO THE NEW WORLD</p>
+        <p class="eyebrow">
+            WELCOME TO THE NEW WORLD
+        </p>
 
         <h1>
             KIRA'S
@@ -100,19 +95,23 @@
 
 </section>
 
-<!-- 
+
 <!-- ================= ABOUT ================= -->
 
-<section id="about" class="section hidden">
+<section id="about" class="section">
 
-    <div class="section-title">
+    <div class="section-title reveal">
+
         <span>01</span>
+
         <h2>THE KIRA CASE</h2>
+
     </div>
+
 
     <div class="about-grid">
 
-        <div class="about-text">
+        <div class="about-text reveal">
 
             <p class="red-label">
                 THE BEGINNING
@@ -127,33 +126,34 @@
             </h3>
 
             <p>
-                Light Yagami was an exceptionally intelligent Japanese
-                high-school student who discovered a mysterious notebook
-                known as the Death Note.
+                Light Yagami was an exceptionally intelligent
+                Japanese high-school student who discovered
+                a mysterious notebook known as the Death Note.
             </p>
 
             <p>
-                After discovering its power, Light adopted the name
-                <strong>Kira</strong> and began eliminating criminals,
+                After discovering its power, Light adopted the
+                name Kira and began eliminating criminals,
                 believing that he could create a world without crime.
             </p>
 
             <p>
-                His vision gradually transformed into an obsession with
-                becoming the god of a new world.
+                His vision gradually transformed into an obsession
+                with becoming the god of a new world.
             </p>
 
         </div>
 
-        <div class="about-card">
+
+        <div class="about-card reveal">
 
             <div class="card-symbol">☠</div>
 
             <h3>THE DEATH NOTE</h3>
 
             <p>
-                Write the name of a person while picturing their face,
-                and that person will die.
+                Write the name of a person while picturing
+                their face, and that person will die.
             </p>
 
             <div class="rule">
@@ -171,203 +171,217 @@
 
 <section id="characters" class="section characters-section">
 
-    <div class="section-title hidden">
+    <div class="section-title reveal">
+
         <span>02</span>
+
         <h2>KEY FIGURES</h2>
+
     </div>
+
 
     <div class="character-grid">
 
-        <!-- LIGHT YAGAMI / KIRA -->
 
-<article class="character-card hidden">
+        <!-- LIGHT -->
 
-    <div class="kira-photo">
-        <img
-            src="./270e7ecff0d56393b3390b2a205ca40d.jpg"
-            alt="Light Yagami - Kira"
-        >
-    </div>
+        <article class="character-card reveal">
 
-    <div class="character-info">
+            <div class="kira-photo">
 
-        <span class="character-number">
-            01 / KIRA
-        </span>
+                <img
+                    src="./270e7ecff0d56393b3390b2a205ca40d.jpg"
+                    alt="Light Yagami"
+                >
 
-        <h3>Light Yagami</h3>
+            </div>
 
-        <p>
-            Light Yagami — Kira. A genius who discovered the Death Note
-            and chose to become the judge of humanity. His ultimate goal
-            is to create a new world where he stands as its god.
-        </p>
+            <div class="character-info">
 
-        <div class="stats">
+                <span class="character-number">
+                    01 / KIRA
+                </span>
 
-            <span>
-                INTELLIGENCE
-                <b>10/10</b>
-            </span>
+                <h3>Light Yagami</h3>
 
-            <span>
-                MANIPULATION
-                <b>10/10</b>
-            </span>
+                <p>
+                    Light Yagami — Kira. A genius who discovered
+                    the Death Note and chose to become the judge
+                    of humanity.
+                </p>
 
-        </div>
+                <div class="stats">
 
-    </div>
+                    <span>
+                        INTELLIGENCE
+                        <b>10/10</b>
+                    </span>
 
-</article>
+                    <span>
+                        MANIPULATION
+                        <b>10/10</b>
+                    </span>
 
-        <!-- L LAWLIET -->
+                </div>
 
-<article class="character-card hidden">
+            </div>
 
-    <div class="kira-photo">
-        <img
-            src="./9d842bd88f3ad1263c3e33262afb71c7.jpg"
-            alt="L Lawliet"
-        >
-    </div>
+        </article>
 
-    <div class="character-info">
 
-        <span class="character-number">
-            02 / DETECTIVE
-        </span>
+        <!-- L -->
 
-        <h3>L Lawliet</h3>
+        <article class="character-card reveal">
 
-        <p>
-            L Lawliet is the world's greatest detective and Kira's most
-            dangerous opponent. Brilliant, mysterious, and unpredictable,
-            he dedicates himself to uncovering Kira's true identity.
-        </p>
+            <div class="kira-photo">
 
-        <div class="stats">
+                <img
+                    src="./9d842bd88f3ad1263c3e33262afb71c7.jpg"
+                    alt="L Lawliet"
+                >
 
-            <span>
-                INTELLIGENCE
-                <b>10/10</b>
-            </span>
+            </div>
 
-            <span>
-                DEDUCTION
-                <b>10/10</b>
-            </span>
+            <div class="character-info">
 
-        </div>
+                <span class="character-number">
+                    02 / DETECTIVE
+                </span>
 
-    </div>
+                <h3>L Lawliet</h3>
 
-</article>
+                <p>
+                    L Lawliet is the world's greatest detective
+                    and Kira's most dangerous opponent.
+                </p>
+
+                <div class="stats">
+
+                    <span>
+                        INTELLIGENCE
+                        <b>10/10</b>
+                    </span>
+
+                    <span>
+                        DEDUCTION
+                        <b>10/10</b>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
 
         <!-- RYUK -->
 
-                    
+        <article class="character-card reveal">
 
-<article class="character-card hidden">
+            <div class="kira-photo">
 
-    <div class="kira-photo">
-        <img
-            src="./55782c523eddd72c6a93275a67659e4c.jpg"
-            alt="Ryuk - Shinigami"
-        >
-    </div>
+                <img
+                    src="./55782c523eddd72c6a93275a67659e4c.jpg"
+                    alt="Ryuk"
+                >
 
-    <div class="character-info">
+            </div>
 
-        <span class="character-number">
-            03 / SHINIGAMI
-        </span>
+            <div class="character-info">
 
-        <h3>Ryuk</h3>
+                <span class="character-number">
+                    03 / SHINIGAMI
+                </span>
 
-        <p>
-            Ryuk is a Shinigami who dropped the Death Note into the human
-            world out of boredom. He watches Light's journey with amusement,
-            rarely interfering with the events that unfold.
-        </p>
+                <h3>Ryuk</h3>
 
-        <div class="stats">
+                <p>
+                    Ryuk is a Shinigami who dropped the Death Note
+                    into the human world out of boredom.
+                </p>
 
-            <span>
-                POWER
-                <b>10/10</b>
-            </span>
+                <div class="stats">
 
-            <span>
-                CHAOS
-                <b>10/10</b>
-            </span>
+                    <span>
+                        POWER
+                        <b>10/10</b>
+                    </span>
 
-        </div>
+                    <span>
+                        CHAOS
+                        <b>10/10</b>
+                    </span>
 
-    </div>
+                </div>
 
-</article>
+            </div>
+
+        </article>
 
 
         <!-- MISA -->
-<!-- MISA AMANE -->
 
-<article class="character-card hidden">
+        <article class="character-card reveal">
 
-    <div class="kira-photo">
-        <img
-            src="./a8017c29b7a9c7eda4a406b967cd6d7f.jpg"
-            alt="Misa Amane"
-        >
+            <div class="kira-photo">
+
+                <img
+                    src="./a8017c29b7a9c7eda4a406b967cd6d7f.jpg"
+                    alt="Misa Amane"
+                >
+
+            </div>
+
+            <div class="character-info">
+
+                <span class="character-number">
+                    04 / SECOND KIRA
+                </span>
+
+                <h3>Misa Amane</h3>
+
+                <p>
+                    Misa Amane is the Second Kira and a devoted
+                    follower of Light.
+                </p>
+
+                <div class="stats">
+
+                    <span>
+                        DEVOTION
+                        <b>10/10</b>
+                    </span>
+
+                    <span>
+                        SHINIGAMI EYES
+                        <b>10/10</b>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
     </div>
-
-    <div class="character-info">
-
-        <span class="character-number">
-            04 / SECOND KIRA
-        </span>
-
-        <h3>Misa Amane</h3>
-
-        <p>
-            Misa Amane is the Second Kira and a devoted follower of Light.
-            After receiving the power of the Shinigami Eyes, she becomes
-            one of the most important figures in Kira's story.
-        </p>
-
-        <div class="stats">
-
-            <span>
-                DEVOTION
-                <b>10/10</b>
-            </span>
-
-            <span>
-                SHINIGAMI EYES
-                <b>10/10</b>
-            </span>
-
-        </div>
-
-    </div>
-
-</article>
-
-</div>
 
 </section>
 
-<!-- ================= KIRA'S VICTIMS ================= -->
+
+<!-- ================= VICTIMS ================= -->
 
 <section id="victims" class="section victims-section">
 
-    <div class="section-title hidden">
+    <div class="section-title reveal">
+
         <span>03</span>
+
         <h2>KIRA'S VICTIMS</h2>
+
     </div>
 
-    <div class="victim-intro hidden">
+
+    <div class="victim-intro reveal">
 
         <p class="red-label">
             THE JUDGMENT
@@ -378,9 +392,8 @@
         </h3>
 
         <p>
-            From criminals to investigators, countless people became
-            victims of Kira's judgment. These are some of the most
-            important names connected to his case.
+            From criminals to investigators, countless people
+            became victims of Kira's judgment.
         </p>
 
     </div>
@@ -388,159 +401,109 @@
 
     <div class="victim-grid">
 
-        <!-- RAYE PENBER -->
 
-        <article class="victim-card hidden">
+        <article class="victim-card reveal">
 
-            <div class="victim-number">
-                01
-            </div>
+            <div class="victim-number">01</div>
 
-            <div class="victim-content">
-
+            <div>
                 <h3>Raye Penber</h3>
 
                 <p>
                     FBI agent assigned to investigate the Yagami family.
-                    Kira manipulated him into revealing information about
-                    the other FBI agents.
                 </p>
 
-                <span class="death-status">
-                    KILLED BY KIRA
-                </span>
-
+                <span>KILLED BY KIRA</span>
             </div>
 
         </article>
 
 
-        <!-- NAOMI MISORA -->
+        <article class="victim-card reveal">
 
-        <article class="victim-card hidden">
+            <div class="victim-number">02</div>
 
-            <div class="victim-number">
-                02
-            </div>
-
-            <div class="victim-content">
-
+            <div>
                 <h3>Naomi Misora</h3>
 
                 <p>
-                    Former FBI agent who came dangerously close to
-                    discovering Kira's identity.
+                    Former FBI agent who came dangerously close
+                    to discovering Kira's identity.
                 </p>
 
-                <span class="death-status">
-                    KILLED BY KIRA
-                </span>
-
+                <span>KILLED BY KIRA</span>
             </div>
 
         </article>
 
 
-        <!-- L LAWLIET -->
+        <article class="victim-card reveal">
 
-        <article class="victim-card hidden">
+            <div class="victim-number">03</div>
 
-            <div class="victim-number">
-                03
-            </div>
-
-            <div class="victim-content">
-
+            <div>
                 <h3>L Lawliet</h3>
 
                 <p>
-                    The world's greatest detective and Kira's most
-                    dangerous opponent.
+                    The world's greatest detective and Kira's
+                    most dangerous opponent.
                 </p>
 
-                <span class="death-status">
-                    KILLED IN KIRA'S PLAN
-                </span>
-
+                <span>KILLED IN KIRA'S PLAN</span>
             </div>
 
         </article>
 
 
-        <!-- LIND L. TAILOR -->
+        <article class="victim-card reveal">
 
-        <article class="victim-card hidden">
+            <div class="victim-number">04</div>
 
-            <div class="victim-number">
-                04
-            </div>
-
-            <div class="victim-content">
-
+            <div>
                 <h3>Lind L. Tailor</h3>
 
                 <p>
-                    A condemned prisoner used by L as a decoy during
-                    the first televised confrontation with Kira.
+                    A condemned prisoner used as a decoy
+                    during the first confrontation with Kira.
                 </p>
 
-                <span class="death-status">
-                    KILLED BY KIRA
-                </span>
-
+                <span>KILLED BY KIRA</span>
             </div>
 
         </article>
 
 
-        <!-- FBI AGENTS -->
+        <article class="victim-card reveal">
 
-        <article class="victim-card hidden">
+            <div class="victim-number">05</div>
 
-            <div class="victim-number">
-                05
-            </div>
-
-            <div class="victim-content">
-
+            <div>
                 <h3>12 FBI Agents</h3>
 
                 <p>
-                    Twelve FBI agents were sent to Japan to investigate
+                    FBI agents sent to Japan to investigate
                     individuals connected to the Kira case.
                 </p>
 
-                <span class="death-status">
-                    KILLED BY KIRA
-                </span>
-
+                <span>KILLED BY KIRA</span>
             </div>
 
         </article>
 
 
-        <!-- CRIMINALS -->
+        <article class="victim-card reveal">
 
-        <article class="victim-card hidden">
+            <div class="victim-number">06</div>
 
-            <div class="victim-number">
-                06
-            </div>
-
-            <div class="victim-content">
-
+            <div>
                 <h3>Criminals Worldwide</h3>
 
                 <p>
-                    Criminals around the world became Kira's primary
-                    targets, turning his idea of justice into worldwide
-                    fear.
+                    Criminals around the world became Kira's
+                    primary targets.
                 </p>
 
-                <span class="death-status">
-                    KIRA'S JUDGMENT
-                </span>
-
+                <span>KIRA'S JUDGMENT</span>
             </div>
 
         </article>
@@ -548,36 +511,37 @@
     </div>
 
 
-    <!-- KIRA'S RECORD -->
+    <div class="victim-counter reveal">
 
-<div class="victim-counter hidden">
+        <span>KIRA'S TOTAL VICTIMS</span>
 
-    <span>
-        KIRA'S TOTAL VICTIMS
-    </span>
+        <strong id="counter">
+            135,412
+        </strong>
 
-    <strong id="counter">
-        135,412
-    </strong>
+        <small>
+            TOTAL RECORDED VICTIMS
+        </small>
 
-    <small>
-        TOTAL RECORDED VICTIMS
-    </small>
+    </div>
 
-</div>
+</section>
 
-    </section>
 
-<!-- ================= DEATH NOTE RULES ================= -->
+<!-- ================= RULES ================= -->
 
 <section id="rules" class="section rules-section">
 
-    <div class="section-title hidden">
+    <div class="section-title reveal">
+
         <span>04</span>
+
         <h2>DEATH NOTE RULES</h2>
+
     </div>
 
-    <div class="rules-intro hidden">
+
+    <div class="rules-intro reveal">
 
         <p class="red-label">
             THE BOOK OF DEATH
@@ -590,8 +554,8 @@
         </h3>
 
         <p>
-            The Death Note is a supernatural notebook capable of
-            killing any human whose name is written inside it.
+            The Death Note is a supernatural notebook capable
+            of killing any human whose name is written inside it.
         </p>
 
     </div>
@@ -600,9 +564,9 @@
     <div class="rules-grid">
 
 
-        <article class="rule-card hidden">
+        <article class="rule-card reveal">
 
-            <span class="rule-number">RULE 01</span>
+            <span>RULE 01</span>
 
             <h3>The Name</h3>
 
@@ -614,9 +578,9 @@
         </article>
 
 
-        <article class="rule-card hidden">
+        <article class="rule-card reveal">
 
-            <span class="rule-number">RULE 02</span>
+            <span>RULE 02</span>
 
             <h3>The Face</h3>
 
@@ -628,9 +592,9 @@
         </article>
 
 
-        <article class="rule-card hidden">
+        <article class="rule-card reveal">
 
-            <span class="rule-number">RULE 03</span>
+            <span>RULE 03</span>
 
             <h3>The Cause</h3>
 
@@ -642,43 +606,41 @@
         </article>
 
 
-        <article class="rule-card hidden">
+        <article class="rule-card reveal">
 
-            <span class="rule-number">RULE 04</span>
+            <span>RULE 04</span>
 
             <h3>The Time</h3>
 
             <p>
                 Details surrounding the death can be written shortly
-                after the cause of death.
+                after the cause.
             </p>
 
         </article>
 
 
-        <article class="rule-card hidden">
+        <article class="rule-card reveal">
 
-            <span class="rule-number">RULE 05</span>
+            <span>RULE 05</span>
 
             <h3>Limitations</h3>
 
             <p>
-                The Death Note has strict rules. Not every imagined
-                action or circumstance can be carried out.
+                The Death Note has strict rules and limitations.
             </p>
 
         </article>
 
 
-        <article class="rule-card hidden">
+        <article class="rule-card reveal">
 
-            <span class="rule-number">RULE 06</span>
+            <span>RULE 06</span>
 
             <h3>The Shinigami</h3>
 
             <p>
-                Every Death Note is connected to a Shinigami,
-                a supernatural being associated with death.
+                Every Death Note is connected to a Shinigami.
             </p>
 
         </article>
@@ -687,11 +649,12 @@
 
 </section>
 
-    <!-- ================= KIRA JUDGMENT ================= -->
+
+<!-- ================= JUDGMENT ================= -->
 
 <section id="judgment" class="judgment-section">
 
-    <div class="judgment-content hidden">
+    <div class="judgment-content reveal">
 
         <p class="eyebrow">
             KIRA'S JUDGMENT
@@ -705,6 +668,7 @@
         <p class="judgment-description">
             Enter a name and witness the judgment of Kira.
         </p>
+
 
         <div class="judgment-form">
 
@@ -721,16 +685,19 @@
 
         </div>
 
+
         <div id="judgmentResult" class="judgment-result"></div>
 
     </div>
 
 </section>
+
+
 <!-- ================= KINGDOM ================= -->
 
 <section id="kingdom" class="kingdom-section">
 
-    <div class="kingdom-content hidden">
+    <div class="kingdom-content reveal">
 
         <p class="eyebrow">
             THE NEW WORLD
