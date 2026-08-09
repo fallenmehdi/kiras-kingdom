@@ -1366,3 +1366,28 @@ img.kira-photo {
     object-fit: contain !important;
     display: block !important;
 }
+/* FIX HERO POSITION */
+.hero {
+    padding-top: 80px;
+}
+
+.hero-content {
+    padding-top: 40px;
+}@media (max-width: 800px) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 70px;
+    }
+
+    .hero-content {
+        padding: 40px 20px 60px;
+    }
+
+    .eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        margin-top: 0;
+    }
+}
