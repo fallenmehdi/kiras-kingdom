@@ -1085,3 +1085,142 @@ footer p {
 .character-card:hover .character-number {
     letter-spacing: 5px;
 }
+/* =========================================
+   VICTIMS + RULES — PREMIUM DEATH NOTE
+========================================= */
+
+/* VICTIM CARDS */
+
+.victim-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+}
+
+.victim-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #e50914;
+    transition: width .4s ease;
+}
+
+.victim-card:hover {
+    transform: translateY(-5px);
+    background: #0c0c0c;
+    border-color: rgba(229, 9, 20, .55);
+    box-shadow: 0 15px 40px rgba(0,0,0,.65);
+}
+
+.victim-card:hover::after {
+    width: 100%;
+}
+
+.victim-number {
+    transition: transform .35s ease, color .35s ease;
+}
+
+.victim-card:hover .victim-number {
+    color: #ff1a25;
+    transform: scale(1.15);
+}
+
+.victim-content h3 {
+    transition: color .3s ease;
+}
+
+.victim-card:hover .victim-content h3 {
+    color: #e50914;
+}
+
+.death-status {
+    transition: letter-spacing .3s ease;
+}
+
+.victim-card:hover .death-status {
+    letter-spacing: 4px;
+}
+
+
+/* =========================================
+   DEATH NOTE RULE CARDS
+========================================= */
+
+.rule-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.rule-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: #e50914;
+    transition: height .45s ease;
+}
+
+.rule-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(229, 9, 20, .5);
+    background: #090909;
+    box-shadow: 0 18px 45px rgba(0,0,0,.7);
+}
+
+.rule-card:hover::after {
+    height: 100%;
+}
+
+.rule-card h3 {
+    transition: color .3s ease;
+}
+
+.rule-card:hover h3 {
+    color: #e50914 !important;
+}
+
+.rule-number {
+    transition: letter-spacing .3s ease;
+}
+
+.rule-card:hover .rule-number {
+    letter-spacing: 5px;
+}
+
+
+/* =========================================
+   VICTIM COUNTER
+========================================= */
+
+.victim-counter {
+    transition:
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+.victim-counter:hover {
+    border-color: rgba(229,9,20,.5);
+    box-shadow: 0 0 35px rgba(229,9,20,.08);
+}
+
+.victim-counter strong {
+    transition: text-shadow .4s ease;
+}
+
+.victim-counter:hover strong {
+    text-shadow: 0 0 25px rgba(229,9,20,.35);
+}
