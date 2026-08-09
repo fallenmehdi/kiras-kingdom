@@ -1408,3 +1408,16 @@ main {
     position: relative;
     z-index: 2;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 55px;
+}
+
+.logo img {
+    width: 70px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
