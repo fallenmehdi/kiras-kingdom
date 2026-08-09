@@ -1,7 +1,8 @@
 /* =====================================================
-   KIRA'S KINGDOM — DEATH NOTE STYLE
-   COMPLETE STYLE.CSS
+   KIRA'S KINGDOM — CLEAN STYLE
 ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Kalam:wght@300;400;700&family=UnifrakturMaguntia&display=swap');
 
 * {
     margin: 0;
@@ -39,19 +40,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(3, 3, 3, .88);
+    background: rgba(3,3,3,.92);
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(229, 9, 20, .18);
+    border-bottom: 1px solid rgba(229,9,20,.2);
     z-index: 9999;
 }
 
+/* LOGO IMAGE */
+
 .logo {
-    font-family: "Cinzel", serif;
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: 7px;
-    color: #e50914;
+    width: 120px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* NAVIGATION */
 
 .navbar nav {
     display: flex;
@@ -80,6 +92,72 @@ body {
 }
 
 /* =====================================================
+   KIRA INTRO
+===================================================== */
+
+.kira-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: #030303;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-content {
+    animation: introFade 1.2s ease forwards;
+}
+
+.intro-label {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+}
+
+.intro-content h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(45px, 8vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 5px;
+}
+
+.intro-content h1 span {
+    display: block;
+    color: #e50914;
+    font-weight: 800;
+}
+
+.intro-subtitle {
+    margin-top: 25px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 6px;
+}
+
+.intro-line {
+    width: 100px;
+    height: 1px;
+    background: #e50914;
+    margin: 30px auto 0;
+}
+
+@keyframes introFade {
+    from {
+        opacity: 0;
+        transform: scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =====================================================
    HERO
 ===================================================== */
 
@@ -95,13 +173,13 @@ body {
     background:
         radial-gradient(
             circle at 50% 45%,
-            rgba(130, 0, 0, .22),
+            rgba(130,0,0,.25),
             transparent 32%
         ),
         radial-gradient(
             circle at center,
             #111 0%,
-            #030303 65%
+            #030303 70%
         );
 }
 
@@ -109,14 +187,10 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,.1),
-            rgba(0,0,0,.9)
-        );
-
-    pointer-events: none;
+    background: linear-gradient(
+        rgba(0,0,0,.1),
+        rgba(0,0,0,.9)
+    );
 }
 
 .hero::after {
@@ -144,8 +218,13 @@ body {
     z-index: 2;
     width: 100%;
     max-width: 1000px;
-    padding: 100px 25px 60px;
+    padding: 120px 25px 60px;
 }
+
+/* IMPORTANT:
+   This is the WELCOME text inside the hero,
+   NOT the navbar.
+*/
 
 .eyebrow {
     color: #777;
@@ -156,7 +235,7 @@ body {
 
 .hero h1 {
     font-family: "Cinzel", serif;
-    font-size: clamp(55px, 9vw, 120px);
+    font-size: clamp(55px, 9vw, 110px);
     font-weight: 500;
     line-height: .9;
     letter-spacing: 5px;
@@ -166,7 +245,6 @@ body {
     display: block;
     color: #e50914;
     font-weight: 800;
-    letter-spacing: 3px;
 }
 
 .slogan {
@@ -216,6 +294,13 @@ body {
 .section {
     position: relative;
     padding: 120px 7%;
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,.025),
+            transparent 65%
+        ),
+        #050505;
 }
 
 .section-title {
@@ -233,7 +318,7 @@ body {
 
 .section-title h2 {
     font-family: "Cinzel", serif;
-    font-size: clamp(28px, 4vw, 50px);
+    font-size: clamp(28px,4vw,50px);
     letter-spacing: 3px;
 }
 
@@ -258,7 +343,7 @@ body {
 
 .about-text h3 {
     font-family: "Cinzel", serif;
-    font-size: clamp(32px, 5vw, 60px);
+    font-size: clamp(32px,5vw,60px);
     line-height: 1.1;
     margin-bottom: 30px;
 }
@@ -276,12 +361,6 @@ body {
     text-align: center;
     background: #080808;
     border: 1px solid #222;
-    transition: .4s;
-}
-
-.about-card:hover {
-    border-color: rgba(229,9,20,.5);
-    transform: translateY(-5px);
 }
 
 .card-symbol {
@@ -336,10 +415,9 @@ body {
 .character-card:hover {
     transform: translateY(-7px);
     border-color: rgba(229,9,20,.5);
-    box-shadow: 0 20px 50px rgba(0,0,0,.6);
 }
 
-/* YOUR EXISTING IMAGES */
+/* CHARACTER IMAGES */
 
 .kira-photo {
     width: 100%;
@@ -357,6 +435,8 @@ body {
     object-fit: contain;
     display: block;
 }
+
+/* CHARACTER INFO */
 
 .character-info {
     padding: 30px;
@@ -409,7 +489,8 @@ body {
             circle at center,
             rgba(150,0,0,.08),
             transparent 55%
-        );
+        ),
+        #050505;
 }
 
 .victim-intro {
@@ -424,7 +505,7 @@ body {
     margin-bottom: 20px;
 }
 
-.victim-intro > p:last-child {
+.victim-intro p {
     color: #777;
     line-height: 1.8;
 }
@@ -444,12 +525,6 @@ body {
     background: #080808;
     border: 1px solid #1c1c1c;
     border-left: 2px solid #e50914;
-    transition: .35s;
-}
-
-.victim-card:hover {
-    background: #101010;
-    transform: translateY(-4px);
 }
 
 .victim-number {
@@ -504,7 +579,6 @@ body {
     color: #e50914;
     font-family: "Cinzel", serif;
     font-size: clamp(45px,7vw,80px);
-    letter-spacing: 4px;
 }
 
 .victim-counter small {
@@ -525,13 +599,13 @@ body {
 }
 
 .rules-intro h3 {
-    font-family: "Cinzel", serif;
+    font-family: "UnifrakturMaguntia", cursive;
     font-size: clamp(35px,5vw,65px);
     line-height: 1.05;
     margin-bottom: 20px;
 }
 
-.rules-intro > p:last-child {
+.rules-intro p {
     color: #777;
     line-height: 1.8;
 }
@@ -545,17 +619,16 @@ body {
 }
 
 .rule-card {
-    position: relative;
     min-height: 220px;
     padding: 30px;
     background: #080808;
-    border: 1px solid #1b1b1b;
+    border: 1px solid rgba(255,255,255,.25);
     transition: .4s;
 }
 
 .rule-card:hover {
     transform: translateY(-6px);
-    border-color: #333;
+    border-color: #e50914;
 }
 
 .rule-number {
@@ -567,15 +640,16 @@ body {
 }
 
 .rule-card h3 {
-    font-family: "Cinzel", serif;
-    font-size: 23px;
+    font-family: "Kalam", cursive;
+    font-size: 25px;
     margin-bottom: 13px;
 }
 
 .rule-card p {
-    color: #666;
-    font-size: 13px;
-    line-height: 1.8;
+    font-family: "Kalam", cursive;
+    color: #ddd;
+    font-size: 17px;
+    line-height: 1.75;
 }
 
 /* =====================================================
@@ -646,24 +720,6 @@ body {
     color: #e50914;
     font-family: "Cinzel", serif;
     font-size: 25px;
-}
-
-.judgment-result.active {
-    animation: judgmentAppear .7s ease;
-}
-
-@keyframes judgmentAppear {
-    from {
-        opacity: 0;
-        transform: scale(.8);
-        filter: blur(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-        filter: blur(0);
-    }
 }
 
 /* =====================================================
@@ -764,8 +820,8 @@ footer p {
     }
 
     .logo {
-        font-size: 18px;
-        letter-spacing: 5px;
+        width: 95px;
+        height: 48px;
     }
 
     .menu-btn {
@@ -797,7 +853,7 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: 48px;
     }
 
     .slogan {
@@ -826,10 +882,6 @@ footer p {
         padding: 90px 20px;
     }
 
-    .section-title {
-        margin-bottom: 45px;
-    }
-
     .kira-photo {
         height: 300px;
     }
@@ -848,12 +900,19 @@ footer p {
     }
 }
 
-/* SMALL PHONES */
+/* =====================================================
+   SMALL PHONES
+===================================================== */
 
 @media (max-width: 450px) {
 
+    .logo {
+        width: 85px;
+        height: 45px;
+    }
+
     .hero h1 {
-        font-size: 42px;
+        font-size: 40px;
         letter-spacing: 2px;
     }
 
@@ -873,655 +932,3 @@ footer p {
         font-size: 42px;
     }
    }
-/* ===== FIX KIRA'S KINGDOM TITLE ===== */
-
-.hero h1 {
-    font-family: "Cinzel", serif !important;
-    font-size: 42px !important;
-    line-height: 1 !important;
-    letter-spacing: 5px !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-}
-
-.hero h1 span {
-    display: block !important;
-    font-size: 38px !important;
-    color: #e50914 !important;
-    margin-top: 5px !important;
-}
-
-/* Mobile */
-@media (max-width: 800px) {
-    .hero h1 {
-        font-size: 38px !important;
-        letter-spacing: 4px !important;
-    }
-
-    .hero h1 span {
-        font-size: 34px !important;
-    }
-}.logo {
-    font-size: 20px !important;
-    letter-spacing: 6px !important;
-}
-/* =========================================
-   FIX KIRA PHOTO - SHOW FULL IMAGE
-========================================= */
-
-.kira-photo {
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    overflow: hidden !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background: #050505 !important;
-}
-
-.kira-photo img {
-    display: block !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-
-    height: auto !important;
-    max-height: none !important;
-
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    transform: none !important;
-}
-
-/* MOBILE */
-@media (max-width: 800px) {
-
-    .kira-photo {
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-    }
-
-    .kira-photo img {
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        object-fit: contain !important;
-    }
-}
-/* ===== FIX KIRA PHOTO ===== */
-
-.kira-photo {
-    width: 100% !important;
-    height: 300px !important;
-    overflow: hidden !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #050505 !important;
-}
-
-.kira-photo img {
-    width: 100% !important;
-    height: 300px !important;
-    max-width: 100% !important;
-    max-height: 300px !important;
-    object-fit: contain !important;
-    display: block !important;
-}
-
-/* الهاتف */
-@media (max-width: 800px) {
-    .kira-photo {
-        height: 400px !important;
-    }
-
-    .kira-photo img {
-        width: 100% !important;
-        height: 400px !important;
-        max-height: 400px !important;
-        object-fit: contain !important;
-    }
-}
-/* =========================================
-   DEATH NOTE BOOK STYLE
-========================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Kalam:wght@300;400;700&family=UnifrakturMaguntia&display=swap');
-
-
-/* صفحة Death Note */
-
-.rules-section,
-.victims-section,
-.about,
-.section {
-    position: relative;
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(255,255,255,0.035),
-            transparent 65%
-        ),
-        #050505;
-}
-
-
-/* إطار الصفحة */
-
-.rules-section::before,
-.victims-section::before,
-.about::before {
-    content: "";
-
-    position: absolute;
-
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-
-    border: 2px solid rgba(255,255,255,0.65);
-
-    pointer-events: none;
-
-    box-shadow:
-        inset 0 0 0 3px #050505,
-        inset 0 0 0 5px rgba(255,255,255,0.25);
-}
-
-
-/* الكتابة داخل صفحات Death Note */
-
-.rules-section p,
-.victims-section p,
-.about p {
-    font-family: "Kalam", cursive;
-
-    color: #eeeeee;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    letter-spacing: 0.5px;
-}
-
-
-/* العناوين */
-
-.rules-section h2,
-.rules-section h3,
-.victims-section h2,
-.victims-section h3,
-.about h2,
-.about h3 {
-    font-family: "UnifrakturMaguntia", cursive;
-
-    color: #f5f5f5;
-
-    font-weight: 400;
-
-    letter-spacing: 2px;
-}
-
-
-/* عناوين القواعد */
-
-.rule-card h3 {
-    font-family: "Kalam", cursive !important;
-
-    color: #ffffff;
-
-    font-size: 25px;
-
-    font-weight: 700;
-}
-
-
-/* أرقام القواعد */
-
-.rule-number {
-    font-family: "Cinzel", serif;
-
-    color: #ffffff;
-
-    letter-spacing: 4px;
-}
-
-
-/* بطاقات القواعد */
-
-.rule-card {
-    background:
-        linear-gradient(
-            rgba(255,255,255,0.025),
-            rgba(0,0,0,0.05)
-        ),
-        #050505;
-
-    border: 1px solid rgba(255,255,255,0.35);
-
-    border-radius: 0;
-
-    box-shadow:
-        0 0 20px rgba(0,0,0,0.8);
-
-    position: relative;
-}
-
-
-/* الخط الأحمر الصغير */
-
-.rule-card::before {
-    background: #eeeeee;
-}
-
-
-/* النص */
-
-.rule-card p {
-    font-family: "Kalam", cursive;
-
-    color: #eeeeee;
-
-    font-size: 17px;
-
-    line-height: 1.75;
-}
-
-
-/* =========================================
-   DEATH NOTE TITLE
-========================================= */
-
-.death-note-title {
-    font-family: "UnifrakturMaguntia", cursive;
-
-    color: white;
-
-    text-align: center;
-
-    font-size: clamp(45px, 8vw, 90px);
-
-    letter-spacing: 5px;
-
-    margin-bottom: 10px;
-}
-
-
-/* العنوان الأحمر KIRA */
-
-.kira-title {
-    font-family: "Cinzel", serif;
-
-    color: #e50914;
-
-    font-weight: 700;
-
-    letter-spacing: 8px;
-
-    text-align: center;
-}
-
-
-/* =========================================
-   DEATH NOTE PAPER EFFECT
-========================================= */
-
-.death-note-page {
-    position: relative;
-
-    max-width: 1100px;
-
-    margin: 50px auto;
-
-    padding: 90px 8%;
-
-    background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(255,255,255,0.035),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 80% 70%,
-            rgba(255,255,255,0.025),
-            transparent 30%
-        ),
-        #050505;
-
-    border: 2px solid rgba(255,255,255,0.7);
-
-    box-shadow:
-        0 0 40px rgba(0,0,0,0.8);
-}
-
-
-/* إطار داخلي */
-
-.death-note-page::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 12px;
-
-    border: 1px solid rgba(255,255,255,0.25);
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 800px) {
-
-    .rules-section::before,
-    .victims-section::before,
-    .about::before {
-
-        top: 12px;
-        left: 12px;
-        right: 12px;
-        bottom: 12px;
-
-    }
-
-    .rules-section p,
-    .victims-section p,
-    .about p {
-
-        font-size: 16px;
-
-    }
-
-    .rule-card p {
-
-        font-size: 16px;
-
-    }
-
-   }
-/* =========================================
-   FINAL MOBILE FIX
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    /* صورة Death Note */
-    .kira-photo {
-        width: 100% !important;
-        height: 260px !important;
-        max-height: 260px !important;
-        overflow: hidden !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-    .kira-photo img {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        object-fit: contain !important;
-        object-position: center !important;
-    }
-
-
-    /* KIRA'S KINGDOM */
-    .hero h1 {
-        font-size: 42px !important;
-        line-height: 1.05 !important;
-        letter-spacing: 2px !important;
-        margin: 0 !important;
-    }
-
-    .hero h1 span {
-        font-size: 42px !important;
-    }
-
-
-    /* المسافة حول العنوان */
-    .hero-content {
-        padding: 80px 20px 50px !important;
-    }
-
-}
-/* ===== FORCE KIRA KINGDOM SIZE ===== */
-
-.hero h1,
-.hero h1 span {
-    font-size: 35px !important;
-    line-height: 1 !important;
-    letter-spacing: 3px !important;
-    margin: 0 !important;
-}
-
-.hero h1 {
-    max-width: 100% !important;
-}
-
-.hero-content {
-    max-width: 600px !important;
-}
-
-
-/* MOBILE */
-@media (max-width: 800px) {
-
-    .hero h1,
-    .hero h1 span {
-        font-size: 35px !important;
-        line-height: 1 !important;
-        letter-spacing: 2px !important;
-    }
-
-}
-/* ===== FIX LOGO ===== */
-
-.logo {
-    font-size: 16px !important;
-    letter-spacing: 4px !important;
-    font-weight: 700 !important;
-}
-
-@media (max-width: 800px) {
-    .logo {
-        font-size: 14px !important;
-        letter-spacing: 3px !important;
-    }
-}
-/* ===== FIX KIRA PHOTO SIZE ===== */
-
-.kira-photo {
-    width: 100% !important;
-    height: 360px !important;
-    max-height: 360px !important;
-    overflow: hidden !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #050505 !important;
-}
-
-.kira-photo img {
-    width: 100% !important;
-    height: 360px !important;
-    max-height: 360px !important;
-    object-fit: contain !important;
-    display: block !important;
-}
-
-/* إذا كان class="kira-photo" موجودا مباشرة على img */
-img.kira-photo {
-    width: 100% !important;
-    height: 360px !important;
-    max-height: 360px !important;
-    object-fit: contain !important;
-    display: block !important;
-}
-/* FIX HERO POSITION */
-.hero {
-    padding-top: 80px;
-}
-
-.hero-content {
-    padding-top: 40px;
-}@media (max-width: 800px) {
-    .hero {
-        min-height: 100vh;
-        padding-top: 70px;
-    }
-
-    .hero-content {
-        padding: 40px 20px 60px;
-    }
-
-    .eyebrow {
-        margin-bottom: 20px;
-    }
-
-    .hero h1 {
-        margin-top: 0;
-    }
-}
-/* Fix header and hero position */
-header {
-    position: relative;
-    z-index: 1000;
-}
-
-.hero,
-.hero-section,
-main {
-    padding-top: 80px;
-}
-
-/* Fix the welcome text being hidden */
-.welcome-text {
-    position: relative;
-    z-index: 2;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    width: 90px;
-    height: 55px;
-}
-
-.logo img {
-    width: 70px;
-    height: 45px;
-    object-fit: contain;
-    display: block;
-}
-/* ================= KIRA INTRO ================= */
-
-.kira-intro {
-    position: fixed;
-    inset: 0;
-    z-index: 99999;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #030303;
-    text-align: center;
-
-    animation: introFadeOut 1s ease 3.5s forwards;
-    pointer-events: none;
-}
-
-.intro-content {
-    animation: introAppear 1.5s ease forwards;
-}
-
-.intro-label {
-    color: #777;
-    font-size: 11px;
-    letter-spacing: 8px;
-    margin-bottom: 25px;
-}
-
-.intro-content h1 {
-    margin: 0;
-
-    font-family: "Cinzel", serif;
-    font-size: clamp(55px, 10vw, 120px);
-    line-height: .95;
-    letter-spacing: 5px;
-    color: #fff;
-}
-
-.intro-content h1 span {
-    display: block;
-    color: #e50914;
-
-    text-shadow:
-        0 0 25px rgba(229, 9, 20, .4);
-}
-
-.intro-line {
-    width: 0;
-    height: 1px;
-
-    margin: 28px auto 0;
-
-    background: #e50914;
-
-    animation: introLine 2s ease .5s forwards;
-}
-
-
-/* ظهور النص */
-
-@keyframes introAppear {
-
-    from {
-        opacity: 0;
-        transform: scale(.85);
-        filter: blur(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-        filter: blur(0);
-    }
-}
-
-
-/* الخط الأحمر */
-
-@keyframes introLine {
-
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 180px;
-    }
-}
-
-
-/* اختفاء شاشة البداية */
-
-@keyframes introFadeOut {
-
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
