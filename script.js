@@ -287,3 +287,23 @@ if (victimName) {
     });
 
 }
+/* =========================================
+   KIRA INTRO
+========================================= */
+
+window.addEventListener("load", () => {
+
+    const intro = document.getElementById("kiraIntro");
+
+    if (!intro) return;
+
+    setTimeout(() => {
+        intro.classList.add("hide");
+
+        setTimeout(() => {
+            intro.remove();
+        }, 1000);
+
+    }, 3000);
+
+});
