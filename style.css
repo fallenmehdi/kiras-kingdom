@@ -1391,3 +1391,20 @@ img.kira-photo {
         margin-top: 0;
     }
 }
+/* Fix header and hero position */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.hero,
+.hero-section,
+main {
+    padding-top: 80px;
+}
+
+/* Fix the welcome text being hidden */
+.welcome-text {
+    position: relative;
+    z-index: 2;
+}
